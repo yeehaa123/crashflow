@@ -1,0 +1,17 @@
+<template name="stepsForm">
+  <form class="form-horizontal" action="">
+    {{#each answerGroups }}
+    {{> stepsFormField}}
+    {{/each }}
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+      </div>
+      <div class="btn-group">
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+      </div>
+    </div>
+  </form>
+</template>
