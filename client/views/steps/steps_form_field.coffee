@@ -10,7 +10,7 @@ Template.stepsFormField.helpers
     @type is "checkbox"
   
   checked: (parent)->
-    if parent is String(@)
+    if _.include(parent, String(@))
       "checked"
     else 
       false

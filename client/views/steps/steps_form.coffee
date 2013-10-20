@@ -6,7 +6,7 @@ Template.stepsForm.saveAnswerGroups = (e) ->
     answerGroups = []
     $step.find(".control-group").each (index, answerGroup) ->
       checkboxes = []
-      answer = ""
+      answer = []
 
       $checkboxes = $(answerGroup).find('[type=checkbox]')
 
@@ -15,7 +15,7 @@ Template.stepsForm.saveAnswerGroups = (e) ->
       else
         $checkboxes = $checkboxes.each (i, checkbox)->
           if $(checkbox).is(':checked')
-            answer = checkbox.value
+            answer.push(checkbox.value)
           checkboxes.push(checkbox.value)
 
       newAnswerGroup =
