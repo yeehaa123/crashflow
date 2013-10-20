@@ -9,5 +9,8 @@ Template.stepsFormField.helpers
   checkbox: ->
     @type is "checkbox"
   
-  checked: ->
-    false
+  checked: (parent)->
+    if parent is String(@)
+      "checked"
+    else 
+      false

@@ -23,7 +23,7 @@
       <div class="controls" data-type="{{type}}">
         {{#each checkboxes}}
           <label class="checkbox inline">
-            <input type="checkbox" value="{{this}}" checked="{{../checked}}"/>{{this}}
+            <input type="checkbox" value="{{this}}" {{checked ../answer}}/>{{this}}
           </label>
         {{/each}}
       </div>
