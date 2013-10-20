@@ -1,0 +1,6 @@
+Template.stepsForm.events
+  "blur input": (e) ->
+    e.preventDefault()
+    $step = $(e.target).parents('.step')
+    stepNumber = $step.data('stepnumber')
+    console.log(user)
