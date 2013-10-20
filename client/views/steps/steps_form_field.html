@@ -19,9 +19,14 @@
     
   {{# if checkbox}}
     <div class="control-group">
-      <label class="checkbox inline">
-        <input type="checkbox" value="option1"/>1
-      </label>
+      <label class="control-label">{{question}}</label>
+      <div class="controls" data-type="{{type}}">
+        {{#each checkboxes}}
+          <label class="checkbox inline">
+            <input type="checkbox" value="{{this}}" checked="{{../checked}}"/>{{this}}
+          </label>
+        {{/each}}
+      </div>
     </div>
   {{/if}}
 </template>

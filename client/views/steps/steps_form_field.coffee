@@ -8,3 +8,6 @@ Template.stepsFormField.helpers
 
   checkbox: ->
     @type is "checkbox"
+  
+  checked: ->
+    false

@@ -4,28 +4,21 @@ Template.stepsForm.saveAnswerGroups = (e) ->
     stepNumber = $step.data('stepnumber')
     
     answerGroups = []
-    $step.find(".control-group").each (index, answerGroup) ->
+    $step.find(".control-group").each (index, answer) ->
       checkboxes = []
-      answer = ""
-
-      $checkboxes = $(answerGroup).find('[type=checkbox]')
-
-      if $checkboxes.length is 0
-        answer = $(answerGroup).find('.answer').val()
-      else
+      $checkboxes = $(answer).find('[type=checkbox]')
+      unless $checkboxes.length is 0
         $checkboxes = $checkboxes.each (i, checkbox)->
           if $(checkbox).is(':checked')
             answer = checkbox.value
           checkboxes.push(checkbox.value)
-
-      newAnswerGroup =
+      answerGroup =
         id: index
-        question: $(answerGroup).find('label')[0].innerText
-        answer: answer
+        question: $(answer).find('label')[0].innerText
+        answer: answer or $(answer).find('.answer').val()
         checkboxes: checkboxes
-        type: $(answerGroup).find('.controls').data('type')
-
-      answerGroups.push(newAnswerGroup)
+        type: $(answer).find('.controls').data('type')
+      answerGroups.push(answerGroup)
 
     stepId = Steps.findOne(stepNumber: stepNumber)._id
 
