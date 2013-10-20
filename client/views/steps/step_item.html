@@ -6,7 +6,10 @@
         <h1>{{title}} <small>Step {{stepNumber}}</small>
         </h1>
       </div>
-      {{> stepsForm}}
+      <div class="step-body invisible">
+        <p>{{description}}</p>
+        {{> stepsForm}}
+      </div>
     </div>
   </div>
 </div>

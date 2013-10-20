@@ -88,7 +88,7 @@ stepsData = [
   stepNumber: 4
   answerGroups: [
     id: 0
-    question: "+ what kind of quantitative information do you want to get from each relevant part?"
+    question: "what kind of quantitative information do you want to get from each relevant part?"
     type: "checkbox"
   ]
 ,
