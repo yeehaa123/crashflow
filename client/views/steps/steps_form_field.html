@@ -1,8 +1,27 @@
 <template name="stepsFormField">
-  <div class="control-group">
-    <label class="control-label">{{question}}</label>
-    <div class="controls">
-      <input class="textinput span12" type="text" value="{{answer}}"/>
+  {{# if textinput}}
+    <div class="control-group">
+      <label class="control-label">{{question}}</label>
+      <div class="controls" data-type="{{type}}">
+        <input class="textinput answer span12" type="text" value="{{answer}}"/>
+      </div>
     </div>
-  </div>
+  {{/if}}
+    
+  {{# if textarea}}
+    <div class="control-group">
+      <label class="control-label">{{question}}</label>
+      <div class="controls" data-type="{{type}}">
+        <textarea class="answer span12" value="{{answer}}">{{answer}}</textarea>
+      </div>
+    </div>
+  {{/if}}
+    
+  {{# if checkbox}}
+    <div class="control-group">
+      <label class="checkbox inline">
+        <input type="checkbox" value="option1"/>1
+      </label>
+    </div>
+  {{/if}}
 </template>

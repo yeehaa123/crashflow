@@ -1,5 +1,4 @@
-Template.stepsForm.events
-  "blur input": (e) ->
+Template.stepsForm.saveAnswerGroups = (e) ->
     e.preventDefault()
     $step = $(e.target).parents('.step')
     stepNumber = $step.data('stepnumber')
@@ -9,7 +8,9 @@ Template.stepsForm.events
       answerGroup =
         id: index
         question: $(answer).find('label')[0].innerText
-        answer: $(answer).find('input').val()
+        answer: $(answer).find('.answer').val()
+        type: $(answer).find('.controls').data('type')
+      console.log(answerGroup.answer)
       answerGroups.push(answerGroup)
 
     stepId = Steps.findOne(stepNumber: stepNumber)._id
@@ -19,3 +20,6 @@ Template.stepsForm.events
       if error 
         alert(error.reason)
 
+Template.stepsForm.events
+  "blur input": Template.stepsForm.saveAnswerGroups
+  "blur textarea": Template.stepsForm.saveAnswerGroups
