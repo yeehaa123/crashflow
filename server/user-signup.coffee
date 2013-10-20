@@ -39,6 +39,7 @@ stepsData = [
     id: 1
     question: "how do these resources allow you to acquire relevant data?"
     type: "checkbox"
+    checkboxes: ["Search & Browse", "Download whole collection", "Extract data through API"]
   ,
     id: 2
     question: "which API is appropriate for your project?"
@@ -58,12 +59,14 @@ stepsData = [
   stepNumber: 2
   answerGroups: [
     id: 0
-    question: "what type of data are you working with?"
+    question: "what is the nature of the data are you working with?"
     type: "checkbox"
+    checkboxes: ["metadata description with fields", "natural language description (i.e. summary, review)", "full-text document", "non textual document (image, video, audio)"]
   ,
     id: 1
-    question: "how is the data structured?"
-    type: "long"
+    question: "what data types occur in the metadata fields?"
+    type: "checkbox"
+    checkboxes: ["text string", "single character", "integer (a number without fractional portion)", "float (a number with a fractional portion)", "index (reference to a location in other data)"]
   ,
     id: 2
     question: "is the data structured consistently?"
@@ -90,6 +93,7 @@ stepsData = [
     id: 0
     question: "what kind of quantitative information do you want to get from each relevant part?"
     type: "checkbox"
+    checkboxes: ["frequency of occurrence", "frequency of co-occurrence", "order of occurrence (timeline)"]
   ]
 ,
   title: "Represent"
@@ -98,7 +102,11 @@ stepsData = [
   answerGroups: [
     id: 0
     question: "What kind of visual model would best allow you to analyse your data to answer your research question?"
-    type: "checkbox"
+    type: "long"
+  ,
+    id: 0
+    question: "Which features of the data set do you want to represent?"
+    type: "long"
   ]
 ,
   title: "Refine"
@@ -115,7 +123,8 @@ stepsData = [
   ,
     id: 2
     question: "what refinement methods would give focus to the areas of interest?"
-    type: "short"
+    type: "checkbox"
+    checkboxes: ["use colours to differentiate data points", "zoom in on areas of interest", "rotate presentation"]
   ]
 ,
   title: "Interact"
@@ -127,7 +136,7 @@ stepsData = [
     type: "short"
   ,
     id: 1
-    question: "for which feaatures do you want to control visibility?"
+    question: "for which features do you want to control visibility?"
     type: "short"
   ]
 ]
