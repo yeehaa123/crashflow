@@ -129,6 +129,7 @@ stepsData = [
     id: 1
     question: "for which feaatures do you want to control visibility?"
     type: "short"
+  ]
 ]
 
 Accounts.onCreateUser (options, user) ->
