@@ -16,16 +16,8 @@ stepsData = [
     type: "short"
   ,
     id: 3
-    question: "What is the domain of your project?"
+    question: "What are the core concepts/keywords of your project?"
     type: "short"
-  ,
-    id: 4
-    question: "What are the core concepts of your project?"
-    type: "short"
-  ,
-    id: 5
-    question: "What are the relevant keywords?"
-    type: "long"
   ]
 ,
   title: "Acquire"
@@ -33,7 +25,7 @@ stepsData = [
   stepNumber: 1
   answerGroups: [
     id: 0
-    question: "which sources have data that is relevant to your research question?"
+    question: "which online resources have data that is relevant to your research question?"
     type: "short"
   ,
     id: 1
@@ -42,14 +34,10 @@ stepsData = [
     checkboxes: ["Search & Browse", "Download whole collection", "Extract data through API"]
   ,
     id: 2
-    question: "which API is appropriate for your project?"
+    question: "What is the data that you need from these resources?"
     type: "short"
   ,
     id: 3
-    question: "What is the data that you need from the API?"
-    type: "short"
-  ,
-    id: 4
     question: "What query or queries would give you the data you need (think of the keywords you entered for step 0)?"
     type: "short"
   ]
@@ -59,17 +47,16 @@ stepsData = [
   stepNumber: 2
   answerGroups: [
     id: 0
-    question: "what is the nature of the data are you working with?"
-    type: "checkbox"
-    checkboxes: ["metadata description with fields", "natural language description (i.e. summary, review)", "full-text document", "non textual document (image, video, audio)"]
-  ,
-    id: 1
     question: "what data types occur in the metadata fields?"
     type: "checkbox"
-    checkboxes: ["text string", "single character", "integer (a number without fractional portion)", "float (a number with a fractional portion)", "index (reference to a location in other data)"]
+    checkboxes: ["textual data", "numeric data", "references"]
+  ,
+    id: 1
+    question: "is the data structured consistently?"
+    type: "checkbox"
   ,
     id: 2
-    question: "is the data structured consistently?"
+    question: "in what ways can the data/metadata be naturally grouped or partitioned in order to be to test your hypothesis?"
     type: "checkbox"
   ]
 ,
@@ -94,6 +81,10 @@ stepsData = [
     question: "what kind of quantitative information do you want to get from each relevant part?"
     type: "checkbox"
     checkboxes: ["frequency of occurrence", "frequency of co-occurrence", "order of occurrence (timeline)"]
+  ,
+    id: 1
+    question: "Does this quantitative information require a specific format, and if so, how do you prepare the data in the right format?"
+    type: "long"
   ]
 ,
   title: "Represent"
@@ -102,10 +93,6 @@ stepsData = [
   answerGroups: [
     id: 0
     question: "What kind of visual model would best allow you to analyse your data to answer your research question?"
-    type: "long"
-  ,
-    id: 0
-    question: "Which features of the data set do you want to represent?"
     type: "long"
   ]
 ,
@@ -137,6 +124,10 @@ stepsData = [
   ,
     id: 1
     question: "for which features do you want to control visibility?"
+    type: "short"
+  ,
+    id: 2
+    question: "when you interact with the visualization tool and the data, does it help you to answer your research question?"
     type: "short"
   ]
 ]
