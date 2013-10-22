@@ -52,12 +52,12 @@ stepsData = [
     checkboxes: ["textual data", "numeric data", "references"]
   ,
     id: 1
-    question: "is the data structured consistently?"
-    type: "checkbox"
+    question: "is the data structured consistently, and why is this (not) the case?"
+    type: "short"
   ,
     id: 2
     question: "in what ways can the data/metadata be naturally grouped or partitioned in order to be to test your hypothesis?"
-    type: "checkbox"
+    type: "short"
   ]
 ,
   title: "Filter"
