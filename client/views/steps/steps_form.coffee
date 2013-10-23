@@ -18,6 +18,11 @@ Template.stepsForm.saveAnswerGroups = (e) ->
             answer.push(checkbox.value)
           checkboxes.push(checkbox.value)
 
+      $tags = $(answerGroup).find('[data-type="tags"]').find('input').val()
+
+      if $tags
+        answer = $tags.split(', ')
+
       newAnswerGroup =
         id: index
         question: $(answerGroup).find('label')[0].innerText
@@ -32,6 +37,8 @@ Template.stepsForm.saveAnswerGroups = (e) ->
     Steps.update stepId, {$set: {answerGroups: answerGroups}}, (error) ->
       if error 
         alert(error.reason)
+
+    Session.set('ran', true)
 
 Template.stepsForm.events
   "blur input": Template.stepsForm.saveAnswerGroups

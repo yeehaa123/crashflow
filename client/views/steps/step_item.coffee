@@ -1,12 +1,14 @@
 Template.stepItem.rendered = ->
-  step = this.find('.step-body')
-  $(step).addClass('invisible')
-
+  step = $(@find('.step-body'))
+  if !Session.get('ran')
+    step.addClass('invisible')
+    
 Template.stepItem.events
-  "click span": (e) ->
+  "click h1": (e) ->
     $form = $(e.target).closest('.step').find('.step-body')
     $form.toggleClass('invisible')
-    if $(e.target).text() is "+"
-      $(e.target).text("-")
+    $span = $(e.target).find('span')
+    if $span.text() is "+"
+      $span.text("-")
     else
-      $(e.target).text("+")
+      $span.text("+")

@@ -16,8 +16,8 @@ stepsData = [
     type: "short"
   ,
     id: 3
-    question: "What are the core concepts/keywords of your project?"
-    type: "short"
+    question: "What are the core concepts/keywords of your project? (separate by comma)"
+    type: "tags"
   ]
 ,
   title: "Acquire"
@@ -25,8 +25,8 @@ stepsData = [
   stepNumber: 1
   answerGroups: [
     id: 0
-    question: "which online resources have data that is relevant to your research question?"
-    type: "short"
+    question: "which online resources have data that is relevant to your research question? (separate by comma)"
+    type: "tags"
   ,
     id: 1
     question: "how do these resources allow you to acquire relevant data?"
@@ -65,12 +65,12 @@ stepsData = [
   stepNumber: 3
   answerGroups: [
     id: 0
-    question: "from the data that the API returned, which parts do you need for your research?"
-    type: "short"
+    question: "from the data that the API returned, which parts do you need for your research? (separate by comma)"
+    type: "tags"
   ,
     id: 1
-    question: "which parts of the data can be removed?"
-    type: "short"
+    question: "which parts of the data can be removed? (separate by comma)"
+    type: "tags"
   ]
 ,
   title: "Mine"
@@ -101,12 +101,12 @@ stepsData = [
   stepNumber: 6
   answerGroups: [
     id: 0
-    question: "what are areas of interest in the representation that may need more detail?"
-    type: "short"
+    question: "what are areas of interest in the representation that may need more detail? (separate by comma)"
+    type: "tags"
   ,
     id: 1
-    question: "what aspects of the representation would you like to highlight or represent differently?"
-    type: "short"
+    question: "what aspects of the representation would you like to highlight or represent differently? (separate by comma)"
+    type: "tags"
   ,
     id: 2
     question: "what refinement methods would give focus to the areas of interest?"
@@ -123,8 +123,8 @@ stepsData = [
     type: "short"
   ,
     id: 1
-    question: "for which features do you want to control visibility?"
-    type: "short"
+    question: "for which features do you want to control visibility? (separate by comma)"
+    type: "tags"
   ,
     id: 2
     question: "when you interact with the visualization tool and the data, does it help you to answer your research question?"

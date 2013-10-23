@@ -1,6 +1,6 @@
 Template.stepsFormField.helpers
   textinput: ->
-    @type is "short"
+    @type is "short" || @type is "tags"
 
   textarea: ->
     @type is "long"
